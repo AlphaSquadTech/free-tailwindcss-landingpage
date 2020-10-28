@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TUK</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css" />
+        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/locomotive.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    </head>
+    <body>
+       <div data-scroll-container class="main">
+            <nav class="w-full">
+                <div class="container mx-auto px-6 flex items-center justify-between">
+                    <div class="flex items-center w-64">
+                       <img src="https://logoipsum.com/logo/logo-12.svg">
+                    </div>
+                    <div>
+                        <div onclick="toggleMenu(true)" class="sm:block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+                            <svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <line x1="4" y1="8" x2="20" y2="8" />
+                                <line x1="4" y1="16" x2="20" y2="16" />
+                            </svg>
+                        </div>
+                        <div id="menu" class="md:block lg:block hidden">
+                            <div onclick="toggleMenu(false)" class="block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 fixed focus:outline-none z-30 top-0 pt-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </div>
+                            <ul class="flex text-3xl md:text-base items-center py-8 md:flex flex-col md:flex-row fixed md:relative top-0 bottom-0 left-0 right-0 bg-white z-20">
+                                <li class="text-gray-600 hover:text-gray-800 cursor-pointer md:ml-10 pt-10 md:pt-0"><a href="javascript: void(0)">Company</a></li>
+                                <li class="text-gray-600 hover:text-gray-800 cursor-pointer md:ml-10 pt-10 md:pt-0"><a href="javascript: void(0)">Features</a></li>
+                                <li class="text-gray-600 hover:text-gray-800 cursor-pointer md:ml-10 pt-10 md:pt-0"><a href="javascript: void(0)">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="w-full px-6">
+                <div class="mt-8 relative rounded-lg bg-gradient-to-r from-purple-900 via-indigo-700 to-purple-500 container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
+                    <svg class="mr-2 lg:mr-12 mt-2 lg:mt-12 absolute right-0 top-0" width="104px" height="95px" viewBox="0 0 104 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Work-in-Progress" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.122837612">
+                            <g transform="translate(-1139.000000, -175.000000)" fill="#FFFFFF">
+                                <g id="Group-5" transform="translate(1139.000000, 175.000000)">
+                                    <path d="M1.99948119,4 C0.897535668,4 0,3.10246433 0,1.99948119 C0,0.896498054 0.897535668,0 1.99948119,0 C3.10350195,0 4,0.896498054 4,1.99948119 C4,3.10246433 3.10350195,4 1.99948119,4" id="Fill-46"></path>
+                                    <path d="M22,4 C20.8973029,4 20,3.10246433 20,1.99948119 C20,0.896498054 20.8973029,0 22,0 C23.1037344,0 24,0.896498054 24,1.99948119 C24,3.10246433 23.1037344,4 22,4" id="Fill-47"></path>
+                                    <path d="M42,4 C40.8962656,4 40,3.10246433 40,1.99948119 C40,0.896498054 40.8962656,0 42,0 C43.1016598,0 44,0.896498054 44,1.99948119 C44,3.10246433 43.1016598,4 42,4" id="Fill-48"></path>
+                                    <path d="M62.0005188,4 C60.8964981,4 60,3.10246433 60,1.99948119 C60,0.896498054 60.8964981,0 62.0005188,0 C63.1024643,0 64,0.896498054 64,1.99948119 C64,3.10246433 63.1024643,4 62.0005188,4" id="Fill-49"></path>
+                                    <path d="M81.9984436,4 C80.8964981,4 80,3.10246433 80,1.99948119 C80,0.896498054 80.8964981,0 81.9984436,0 C83.1024643,0 84,0.896498054 84,1.99948119 C84,3.10246433 83.1024643,4 81.9984436,4" id="Fill-50"></path>
+                                    <path d="M102,4 C100.89834,4 100,3.10246433 100,1.99948119 C100,0.896498054 100.89834,0 102,0 C103.103734,0 104,0.896498054 104,1.99948119 C104,3.10246433 103.103734,4 102,4" id="Fill-51"></path>
+                                    <path d="M1.99948119,22 C0.897535668,22 0,21.1024643 0,19.9994812 C0,18.8964981 0.897535668,18 1.99948119,18 C3.10350195,18 4,18.8964981 4,19.9994812 C4,21.1024643 3.10350195,22 1.99948119,22" id="Fill-52"></path>
+                                    <path d="M22,22 C20.8973029,22 20,21.1024643 20,19.9994812 C20,18.8964981 20.8973029,18 22,18 C23.1037344,18 24,18.8964981 24,19.9994812 C24,21.1024643 23.1037344,22 22,22" id="Fill-53"></path>
+                                    <path d="M42,22 C40.8962656,22 40,21.1024643 40,19.9994812 C40,18.8964981 40.8962656,18 42,18 C43.1016598,18 44,18.8964981 44,19.9994812 C44,21.1024643 43.1016598,22 42,22" id="Fill-54"></path>
+                                    <path d="M62.0005188,22 C60.8964981,22 60,21.1024643 60,19.9994812 C60,18.8964981 60.8964981,18 62.0005188,18 C63.1024643,18 64,18.8964981 64,19.9994812 C64,21.1024643 63.1024643,22 62.0005188,22" id="Fill-55"></path>
+                                    <path d="M81.9984436,22 C80.8964981,22 80,21.1024643 80,19.9994812 C80,18.8964981 80.8964981,18 81.9984436,18 C83.1024643,18 84,18.8964981 84,19.9994812 C84,21.1024643 83.1024643,22 81.9984436,22" id="Fill-56"></path>
+                                    <path d="M102,22 C100.89834,22 100,21.1024643 100,19.9994812 C100,18.8964981 100.89834,18 102,18 C103.103734,18 104,18.8964981 104,19.9994812 C104,21.1024643 103.103734,22 102,22" id="Fill-57"></path>
+                                    <path d="M1.99948119,40 C0.897535668,40 0,39.1026971 0,38 C0,36.8973029 0.897535668,36 1.99948119,36 C3.10350195,36 4,36.8973029 4,38 C4,39.1026971 3.10350195,40 1.99948119,40" id="Fill-58"></path>
+                                    <path d="M22,40 C20.8973029,40 20,39.1026971 20,38 C20,36.8973029 20.8973029,36 22,36 C23.1037344,36 24,36.8973029 24,38 C24,39.1026971 23.1037344,40 22,40" id="Fill-59"></path>
+                                    <path d="M42,40 C40.8962656,40 40,39.1026971 40,38 C40,36.8973029 40.8962656,36 42,36 C43.1016598,36 44,36.8973029 44,38 C44,39.1026971 43.1016598,40 42,40" id="Fill-60"></path>
+                                    <path d="M62.0005188,40 C60.8964981,40 60,39.1026971 60,38 C60,36.8973029 60.8964981,36 62.0005188,36 C63.1024643,36 64,36.8973029 64,38 C64,39.1026971 63.1024643,40 62.0005188,40" id="Fill-61"></path>
+                                    <path d="M81.9984436,40 C80.8964981,40 80,39.1026971 80,38 C80,36.8973029 80.8964981,36 81.9984436,36 C83.1024643,36 84,36.8973029 84,38 C84,39.1026971 83.1024643,40 81.9984436,40" id="Fill-62"></path>
+                                    <path d="M102,40 C100.89834,40 100,39.1026971 100,38 C100,36.8973029 100.89834,36 102,36 C103.103734,36 104,36.8973029 104,38 C104,39.1026971 103.103734,40 102,40" id="Fill-63"></path>
+                                    <path d="M1.99948119,59 C0.897535668,59 0,58.1026971 0,57 C0,55.8973029 0.897535668,55 1.99948119,55 C3.10350195,55 4,55.8973029 4,57 C4,58.1026971 3.10350195,59 1.99948119,59" id="Fill-64"></path>
+                                    <path d="M22,59 C20.8973029,59 20,58.1026971 20,57 C20,55.8973029 20.8973029,55 22,55 C23.1037344,55 24,55.8973029 24,57 C24,58.1026971 23.1037344,59 22,59" id="Fill-65"></path>
+                                    <path d="M42,59 C40.8962656,59 40,58.1026971 40,57 C40,55.8973029 40.8962656,55 42,55 C43.1016598,55 44,55.8973029 44,57 C44,58.1026971 43.1016598,59 42,59" id="Fill-66"></path>
+                                    <path d="M62.0005188,59 C60.8964981,59 60,58.1026971 60,57 C60,55.8973029 60.8964981,55 62.0005188,55 C63.1024643,55 64,55.8973029 64,57 C64,58.1026971 63.1024643,59 62.0005188,59" id="Fill-67"></path>
+                                    <path d="M81.9984436,59 C80.8964981,59 80,58.1026971 80,57 C80,55.8973029 80.8964981,55 81.9984436,55 C83.1024643,55 84,55.8973029 84,57 C84,58.1026971 83.1024643,59 81.9984436,59" id="Fill-68"></path>
+                                    <path d="M102,59 C100.89834,59 100,58.1026971 100,57 C100,55.8973029 100.89834,55 102,55 C103.103734,55 104,55.8973029 104,57 C104,58.1026971 103.103734,59 102,59" id="Fill-69"></path>
+                                    <path d="M1.99948119,77 C0.897535668,77 0,76.1026971 0,75 C0,73.8973029 0.897535668,73 1.99948119,73 C3.10350195,73 4,73.8973029 4,75 C4,76.1026971 3.10350195,77 1.99948119,77" id="Fill-70"></path>
+                                    <path d="M22,77 C20.8973029,77 20,76.1026971 20,75 C20,73.8973029 20.8973029,73 22,73 C23.1037344,73 24,73.8973029 24,75 C24,76.1026971 23.1037344,77 22,77" id="Fill-71"></path>
+                                    <path d="M42,77 C40.8962656,77 40,76.1026971 40,75 C40,73.8973029 40.8962656,73 42,73 C43.1016598,73 44,73.8973029 44,75 C44,76.1026971 43.1016598,77 42,77" id="Fill-72"></path>
+                                    <path d="M62.0005188,77 C60.8964981,77 60,76.1026971 60,75 C60,73.8973029 60.8964981,73 62.0005188,73 C63.1024643,73 64,73.8973029 64,75 C64,76.1026971 63.1024643,77 62.0005188,77" id="Fill-73"></path>
+                                    <path d="M81.9984436,77 C80.8964981,77 80,76.1026971 80,75 C80,73.8973029 80.8964981,73 81.9984436,73 C83.1024643,73 84,73.8973029 84,75 C84,76.1026971 83.1024643,77 81.9984436,77" id="Fill-74"></path>
+                                    <path d="M102,77 C100.89834,77 100,76.1026971 100,75 C100,73.8973029 100.89834,73 102,73 C103.103734,73 104,73.8973029 104,75 C104,76.1026971 103.103734,77 102,77" id="Fill-75"></path>
+                                    <path d="M1.99948119,95 C0.897535668,95 0,94.1024643 0,92.9994812 C0,91.8964981 0.897535668,91 1.99948119,91 C3.10350195,91 4,91.8964981 4,92.9994812 C4,94.1024643 3.10350195,95 1.99948119,95" id="Fill-76"></path>
+                                    <path d="M22,95 C20.8973029,95 20,94.1024643 20,92.9994812 C20,91.8964981 20.8973029,91 22,91 C23.1037344,91 24,91.8964981 24,92.9994812 C24,94.1024643 23.1037344,95 22,95" id="Fill-77"></path>
+                                    <path d="M42,95 C40.8962656,95 40,94.1024643 40,92.9994812 C40,91.8964981 40.8962656,91 42,91 C43.1016598,91 44,91.8964981 44,92.9994812 C44,94.1024643 43.1016598,95 42,95" id="Fill-78"></path>
+                                    <path d="M62.0005188,95 C60.8964981,95 60,94.1024643 60,92.9994812 C60,91.8964981 60.8964981,91 62.0005188,91 C63.1024643,91 64,91.8964981 64,92.9994812 C64,94.1024643 63.1024643,95 62.0005188,95" id="Fill-79"></path>
+                                    <path d="M81.9984436,95 C80.8964981,95 80,94.1024643 80,92.9994812 C80,91.8964981 80.8964981,91 81.9984436,91 C83.1024643,91 84,91.8964981 84,92.9994812 C84,94.1024643 83.1024643,95 81.9984436,95" id="Fill-80"></path>
+                                    <path d="M102,95 C100.89834,95 100,94.1024643 100,92.9994812 C100,91.8964981 100.89834,91 102,91 C103.103734,91 104,91.8964981 104,92.9994812 C104,94.1024643 103.103734,95 102,95" id="Fill-81"></path>
+                                    <polyline id="Fill-82" points="75 87 13 26 75 26 75 87"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="ml-2 lg:ml-12 mb-2 lg:mb-12 absolute bottom-0 left-0" width="104px" height="95px" viewBox="0 0 104 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Work-in-Progress" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.122837612">
+                            <g transform="translate(-206.000000, -596.000000)" fill="#FFFFFF">
+                                <g id="Group-5" transform="translate(258.000000, 643.500000) scale(-1, -1) translate(-258.000000, -643.500000) translate(206.000000, 596.000000)">
+                                    <path d="M1.99948119,4 C0.897535668,4 0,3.10246433 0,1.99948119 C0,0.896498054 0.897535668,0 1.99948119,0 C3.10350195,0 4,0.896498054 4,1.99948119 C4,3.10246433 3.10350195,4 1.99948119,4" id="Fill-46"></path>
+                                    <path d="M22,4 C20.8973029,4 20,3.10246433 20,1.99948119 C20,0.896498054 20.8973029,0 22,0 C23.1037344,0 24,0.896498054 24,1.99948119 C24,3.10246433 23.1037344,4 22,4" id="Fill-47"></path>
+                                    <path d="M42,4 C40.8962656,4 40,3.10246433 40,1.99948119 C40,0.896498054 40.8962656,0 42,0 C43.1016598,0 44,0.896498054 44,1.99948119 C44,3.10246433 43.1016598,4 42,4" id="Fill-48"></path>
+                                    <path d="M62.0005188,4 C60.8964981,4 60,3.10246433 60,1.99948119 C60,0.896498054 60.8964981,0 62.0005188,0 C63.1024643,0 64,0.896498054 64,1.99948119 C64,3.10246433 63.1024643,4 62.0005188,4" id="Fill-49"></path>
+                                    <path d="M81.9984436,4 C80.8964981,4 80,3.10246433 80,1.99948119 C80,0.896498054 80.8964981,0 81.9984436,0 C83.1024643,0 84,0.896498054 84,1.99948119 C84,3.10246433 83.1024643,4 81.9984436,4" id="Fill-50"></path>
+                                    <path d="M102,4 C100.89834,4 100,3.10246433 100,1.99948119 C100,0.896498054 100.89834,0 102,0 C103.103734,0 104,0.896498054 104,1.99948119 C104,3.10246433 103.103734,4 102,4" id="Fill-51"></path>
+                                    <path d="M1.99948119,22 C0.897535668,22 0,21.1024643 0,19.9994812 C0,18.8964981 0.897535668,18 1.99948119,18 C3.10350195,18 4,18.8964981 4,19.9994812 C4,21.1024643 3.10350195,22 1.99948119,22" id="Fill-52"></path>
+                                    <path d="M22,22 C20.8973029,22 20,21.1024643 20,19.9994812 C20,18.8964981 20.8973029,18 22,18 C23.1037344,18 24,18.8964981 24,19.9994812 C24,21.1024643 23.1037344,22 22,22" id="Fill-53"></path>
+                                    <path d="M42,22 C40.8962656,22 40,21.1024643 40,19.9994812 C40,18.8964981 40.8962656,18 42,18 C43.1016598,18 44,18.8964981 44,19.9994812 C44,21.1024643 43.1016598,22 42,22" id="Fill-54"></path>
+                                    <path d="M62.0005188,22 C60.8964981,22 60,21.1024643 60,19.9994812 C60,18.8964981 60.8964981,18 62.0005188,18 C63.1024643,18 64,18.8964981 64,19.9994812 C64,21.1024643 63.1024643,22 62.0005188,22" id="Fill-55"></path>
+                                    <path d="M81.9984436,22 C80.8964981,22 80,21.1024643 80,19.9994812 C80,18.8964981 80.8964981,18 81.9984436,18 C83.1024643,18 84,18.8964981 84,19.9994812 C84,21.1024643 83.1024643,22 81.9984436,22" id="Fill-56"></path>
+                                    <path d="M102,22 C100.89834,22 100,21.1024643 100,19.9994812 C100,18.8964981 100.89834,18 102,18 C103.103734,18 104,18.8964981 104,19.9994812 C104,21.1024643 103.103734,22 102,22" id="Fill-57"></path>
+                                    <path d="M1.99948119,40 C0.897535668,40 0,39.1026971 0,38 C0,36.8973029 0.897535668,36 1.99948119,36 C3.10350195,36 4,36.8973029 4,38 C4,39.1026971 3.10350195,40 1.99948119,40" id="Fill-58"></path>
+                                    <path d="M22,40 C20.8973029,40 20,39.1026971 20,38 C20,36.8973029 20.8973029,36 22,36 C23.1037344,36 24,36.8973029 24,38 C24,39.1026971 23.1037344,40 22,40" id="Fill-59"></path>
+                                    <path d="M42,40 C40.8962656,40 40,39.1026971 40,38 C40,36.8973029 40.8962656,36 42,36 C43.1016598,36 44,36.8973029 44,38 C44,39.1026971 43.1016598,40 42,40" id="Fill-60"></path>
+                                    <path d="M62.0005188,40 C60.8964981,40 60,39.1026971 60,38 C60,36.8973029 60.8964981,36 62.0005188,36 C63.1024643,36 64,36.8973029 64,38 C64,39.1026971 63.1024643,40 62.0005188,40" id="Fill-61"></path>
+                                    <path d="M81.9984436,40 C80.8964981,40 80,39.1026971 80,38 C80,36.8973029 80.8964981,36 81.9984436,36 C83.1024643,36 84,36.8973029 84,38 C84,39.1026971 83.1024643,40 81.9984436,40" id="Fill-62"></path>
+                                    <path d="M102,40 C100.89834,40 100,39.1026971 100,38 C100,36.8973029 100.89834,36 102,36 C103.103734,36 104,36.8973029 104,38 C104,39.1026971 103.103734,40 102,40" id="Fill-63"></path>
+                                    <path d="M1.99948119,59 C0.897535668,59 0,58.1026971 0,57 C0,55.8973029 0.897535668,55 1.99948119,55 C3.10350195,55 4,55.8973029 4,57 C4,58.1026971 3.10350195,59 1.99948119,59" id="Fill-64"></path>
+                                    <path d="M22,59 C20.8973029,59 20,58.1026971 20,57 C20,55.8973029 20.8973029,55 22,55 C23.1037344,55 24,55.8973029 24,57 C24,58.1026971 23.1037344,59 22,59" id="Fill-65"></path>
+                                    <path d="M42,59 C40.8962656,59 40,58.1026971 40,57 C40,55.8973029 40.8962656,55 42,55 C43.1016598,55 44,55.8973029 44,57 C44,58.1026971 43.1016598,59 42,59" id="Fill-66"></path>
+                                    <path d="M62.0005188,59 C60.8964981,59 60,58.1026971 60,57 C60,55.8973029 60.8964981,55 62.0005188,55 C63.1024643,55 64,55.8973029 64,57 C64,58.1026971 63.1024643,59 62.0005188,59" id="Fill-67"></path>
+                                    <path d="M81.9984436,59 C80.8964981,59 80,58.1026971 80,57 C80,55.8973029 80.8964981,55 81.9984436,55 C83.1024643,55 84,55.8973029 84,57 C84,58.1026971 83.1024643,59 81.9984436,59" id="Fill-68"></path>
+                                    <path d="M102,59 C100.89834,59 100,58.1026971 100,57 C100,55.8973029 100.89834,55 102,55 C103.103734,55 104,55.8973029 104,57 C104,58.1026971 103.103734,59 102,59" id="Fill-69"></path>
+                                    <path d="M1.99948119,77 C0.897535668,77 0,76.1026971 0,75 C0,73.8973029 0.897535668,73 1.99948119,73 C3.10350195,73 4,73.8973029 4,75 C4,76.1026971 3.10350195,77 1.99948119,77" id="Fill-70"></path>
+                                    <path d="M22,77 C20.8973029,77 20,76.1026971 20,75 C20,73.8973029 20.8973029,73 22,73 C23.1037344,73 24,73.8973029 24,75 C24,76.1026971 23.1037344,77 22,77" id="Fill-71"></path>
+                                    <path d="M42,77 C40.8962656,77 40,76.1026971 40,75 C40,73.8973029 40.8962656,73 42,73 C43.1016598,73 44,73.8973029 44,75 C44,76.1026971 43.1016598,77 42,77" id="Fill-72"></path>
+                                    <path d="M62.0005188,77 C60.8964981,77 60,76.1026971 60,75 C60,73.8973029 60.8964981,73 62.0005188,73 C63.1024643,73 64,73.8973029 64,75 C64,76.1026971 63.1024643,77 62.0005188,77" id="Fill-73"></path>
+                                    <path d="M81.9984436,77 C80.8964981,77 80,76.1026971 80,75 C80,73.8973029 80.8964981,73 81.9984436,73 C83.1024643,73 84,73.8973029 84,75 C84,76.1026971 83.1024643,77 81.9984436,77" id="Fill-74"></path>
+                                    <path d="M102,77 C100.89834,77 100,76.1026971 100,75 C100,73.8973029 100.89834,73 102,73 C103.103734,73 104,73.8973029 104,75 C104,76.1026971 103.103734,77 102,77" id="Fill-75"></path>
+                                    <path d="M1.99948119,95 C0.897535668,95 0,94.1024643 0,92.9994812 C0,91.8964981 0.897535668,91 1.99948119,91 C3.10350195,91 4,91.8964981 4,92.9994812 C4,94.1024643 3.10350195,95 1.99948119,95" id="Fill-76"></path>
+                                    <path d="M22,95 C20.8973029,95 20,94.1024643 20,92.9994812 C20,91.8964981 20.8973029,91 22,91 C23.1037344,91 24,91.8964981 24,92.9994812 C24,94.1024643 23.1037344,95 22,95" id="Fill-77"></path>
+                                    <path d="M42,95 C40.8962656,95 40,94.1024643 40,92.9994812 C40,91.8964981 40.8962656,91 42,91 C43.1016598,91 44,91.8964981 44,92.9994812 C44,94.1024643 43.1016598,95 42,95" id="Fill-78"></path>
+                                    <path d="M62.0005188,95 C60.8964981,95 60,94.1024643 60,92.9994812 C60,91.8964981 60.8964981,91 62.0005188,91 C63.1024643,91 64,91.8964981 64,92.9994812 C64,94.1024643 63.1024643,95 62.0005188,95" id="Fill-79"></path>
+                                    <path d="M81.9984436,95 C80.8964981,95 80,94.1024643 80,92.9994812 C80,91.8964981 80.8964981,91 81.9984436,91 C83.1024643,91 84,91.8964981 84,92.9994812 C84,94.1024643 83.1024643,95 81.9984436,95" id="Fill-80"></path>
+                                    <path d="M102,95 C100.89834,95 100,94.1024643 100,92.9994812 C100,91.8964981 100.89834,91 102,91 C103.103734,91 104,91.8964981 104,92.9994812 C104,94.1024643 103.103734,95 102,95" id="Fill-81"></path>
+                                    <polyline id="Fill-82" points="75 87 13 26 75 26 75 87"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="w-11/12 sm:w-2/3 mb-5 sm:mb-10">
+                        <h1 data-scroll data-scroll-speed="2" class="pt-20 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-white font-bold leading-tight">
+                            Create beautiful, accessible and responsive UI's faster                        
+                        </h1>
+                    </div>
+                    <div data-scroll data-scroll-speed="2" class="flex justify-center items-center mb-10 sm:mb-20">
+                        <button class="bg-white transition duration-150 ease-in-out focus:outline-none hover:bg-gray-100 rounded text-indigo-700 px-4 sm:px-8 py-1 sm:py-3 text-sm">Get Started</button>
+                        <button class="ml-3 sm:ml-6 bg-transparent transition duration-150 ease-in-out focus:outline-none hover:bg-purple-800 rounded border border-white text-white px-4 sm:px-8 py-1 sm:py-3 text-sm">Learn More</button>
+                    </div>
+                </div>
+                <div class="container mx-auto flex justify-center md:-mt-56 -mt-20 sm:-mt-40">
+                    <div data-scroll data-scroll-speed="-1" class="relative sm:w-2/3 w-11/12">
+                        <img src="https://i.imgur.com/PCwyC8T.png" alt="" class="relative" />
+                    </div>
+                </div>
+                
+            </div>
+
+
+                <section class="max-w-8xl mx-auto container bg-white pt-16">
+                    <div>
+                        <div class="flex items-center flex-col px-4">
+                            <p data-scroll class="uppercase text-lg text-center text-gray-600 leading-normal">in few easy steps</p>
+                            <h2 class="text-4xl lg:text-5xl font-extrabold text-center leading-tight text-gray-800 lg:w-7/12 md:w-9/12 pt-4">Create Beautiful Landing Pages & Web Apps in a Jiffy</h2>
+                        </div>
+                        <div class="mt-20 flex flex-wrap justify-between px-4">
+                            <div class="flex sm:w-full md:w-5/12 pb-20">
+                                <div class="w-20 h-20 relative mr-5">
+                                    <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                                    <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <rect x="3" y="4" width="18" height="4" rx="2" />
+                                            <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+                                            <line x1="10" y1="12" x2="14" y2="12" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-10/12">
+                                    <h4 class="text-lg font-bold leading-tight text-gray-800">Ready to use components</h4>
+                                    <p class="text-base text-gray-600 leading-normal pt-2">
+                                        It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex sm:w-full md:w-5/12 pb-20">
+                                <div class="w-20 h-20 relative mr-5">
+                                    <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                                    <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <circle cx="12" cy="12" r="9" />
+                                            <path d="M9 12l2 2l4 -4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-10/12">
+                                    <h4 class="text-lg font-bold leading-tight text-gray-800">Hight Quality UI you can reply on</h4>
+                                    <p class="text-base text-gray-600 leading-normal pt-2">
+                                        Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex sm:w-full md:w-5/12 pb-20">
+                                <div class="w-20 h-20 relative mr-5">
+                                    <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                                    <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <polyline points="7 8 3 12 7 16" />
+                                            <polyline points="17 8 21 12 17 16" />
+                                            <line x1="14" y1="4" x2="10" y2="20" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-10/12">
+                                    <h4 class="text-lg font-bold leading-tight text-gray-800">Coded by Developers for Developers</h4>
+                                    <p class="text-base text-gray-600 leading-normal pt-2">
+                                        Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex sm:w-full md:w-5/12 pb-20">
+                                <div class="w-20 h-20 relative mr-5">
+                                    <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                                    <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <rect x="3" y="4" width="18" height="12" rx="1" />
+                                            <line x1="7" y1="20" x2="17" y2="20" />
+                                            <line x1="9" y1="16" x2="9" y2="20" />
+                                            <line x1="15" y1="16" x2="15" y2="20" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-10/12">
+                                    <h4 class="text-lg font-bold leading-tight text-gray-800">The Last UI kit you’ll ever need</h4>
+                                    <p class="text-base text-gray-600 leading-normal pt-2">
+                                        We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+
+                <div class="container mx-auto pt-16">
+                    <div class="flex flex-wrap rounded-lg">
+                        <div class="xl:w-2/5 lg:w-2/5 sm:w-full bg-indigo-700 py-16 xl:py-32 px-8 xl:px-16 text-center xl:text-left lg:text-left md:text-left sm:text-left xl:rounded-tl xl:rounded-bl">
+                            <h1 class="font-extrabold text-4xl text-white pb-2">Our Happy Clients</h1>
+                            <p class="text-lg text-white">
+                                Our takeout just went throughout the roof because we could be taking five orders at one time instead of one order at a time.
+                            </p>
+                        </div>
+                        <div class="lg:w-3/5 xl:w-3/5 bg-gray-200 pl-4 pt-4 pb-4 pr-4 xl:pr-10 xl:pl-0 xl:pt-10 xl:pb-10 xl:rounded-tr xl:rounded-br">
+                            <section id="carousel">
+                                 <figure class="visible">
+                                     <div class="relative bg-white">
+                                         <img src="https://cdn.tuk.dev/assets/qoute-1.png" alt="" class="absolute -mt-4 pl-6 sm:pl-12" />
+                                         <div class="pt-20 px-6 sm:px-12">
+                                             <p class="text-gray-600 text-base pb-6">
+                                                 From local banks to local government, we partner with organizations on their journey to digital transformation. Our customers include 15 million professionals in 175 countries and 800 of the fortune 1000.
+                                             </p>
+                                             <p class="text-gray-600 text-base pb-8">
+                                                 We can't believe how far we have come in the last 6 months. I really did not think this awesome career move would come so quickly. Thanks to each of you put into SI and the partner relationships.
+                                             </p>
+                                             <div class="flex items-center justify-between">
+                                                 <div class="flex items-center pb-12">
+                                                     <div class="h-12 w-12">
+                                                         <img src="https://tuk-cdn.s3.amazonaws.com/assets/components/testimonials/t_1.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-full" />
+                                                     </div>
+                                                     <p class="text-gray-600 font-bold ml-3">
+                                                         Jane Doe <br />
+                                                         <span class="text-gray-600 text-base font-light">Apple Inc</span>
+                                                     </p>
+                                                 </div>
+                                                 <div class="cursor-pointer flex pb-12">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="movePrev()">
+                                                         <path stroke="none" d="M0 0h24v24H0z" />
+                                                         <polyline points="15 6 9 12 15 18" />
+                                                     </svg>
+                                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="moveForward()">
+                                                         <path stroke="none" d="M0 0h24v24H0z" />
+                                                         <polyline points="9 6 15 12 9 18" />
+                                                     </svg>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </figure>
+                                <figure class="hidden">
+                                    <div class="relative bg-white">
+                                        <img src="https://cdn.tuk.dev/assets/qoute-1.png" alt="" class="absolute -mt-4 pl-6 sm:pl-12" />
+                                        <div class="pt-20 px-6 sm:px-12">
+                                            <p class="text-gray-600 text-base pb-6">
+                                                The company really helped me with my personal branding. Everything from conception to execution was extremely awesome and really professional. I enjoyed the services they offered. Their design is impeccable.
+                                            </p>
+                                            <p class="text-gray-600 text-base pb-8">
+                                                I truly value the relationship they created with me. I will always think first about them while starting any projects in the future. They are definitely my go-to for any design or services. Excellent communication and I always feel that I am their first priority.
+                                            </p>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center pb-12">
+                                                    <div class="h-12 w-12">
+                                                        <img src="https://cdn.tuk.dev/assets/templates/Project+Management/pm_15.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-full" />
+                                                    </div>
+                                                    <p class="text-gray-600 font-bold ml-3">
+                                                        Richard Stark <br />
+                                                        <span class="text-gray-600 text-base font-light">UX Strategy</span>
+                                                    </p>
+                                                </div>
+                                                <div class="cursor-pointer flex pb-12">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="movePrev()">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <polyline points="15 6 9 12 15 18" />
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="moveForward()">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <polyline points="9 6 15 12 9 18" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="hidden">
+                                    <div class="relative bg-white">
+                                        <img src="https://cdn.tuk.dev/assets/qoute-1.png" alt="" class="absolute -mt-4 pl-6 sm:pl-12" />
+                                        <div class="pt-20 px-6 sm:px-12">
+                                            <p class="text-gray-600 text-base pb-6">
+                                                It's not just a pretty face but I am also thrilled by the quality of support. It's fast reliable and has no complications at all. It has completely changed the way I develop a website . It lets you create anything you envision and it does so easily and flawlessly.
+                                            </p>
+                                            <p class="text-gray-600 text-base pb-8">
+                                                Undoubtedly working with them was just like playing. It was so easy editing your content, so fast getting perfect results and so easy customizing based on your own brand.Thank you so much.
+                                            </p>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center pb-12">
+                                                    <div class="h-12 w-12">
+                                                        <img src="https://cdn.tuk.dev/assets/templates/Project+Management/pm_18.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-full" />
+                                                    </div>
+                                                    <p class="text-gray-600 font-bold ml-3">
+                                                        Thomas Clark<br />
+                                                        <span class="text-gray-600 text-base font-light">Maintenance</span>
+                                                    </p>
+                                                </div>
+                                                <div class="cursor-pointer flex pb-12">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="movePrev()">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <polyline points="15 6 9 12 15 18" />
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="moveForward()">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <polyline points="9 6 15 12 9 18" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+         
+            
+                <div class="container flex justify-center mx-auto pt-16">
+                    <div>
+                        <p   class="text-gray-500 text-lg text-center font-normal pb-3">BUILDING TEAM</p>
+                        <h1 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">The Talented People Behind the Scenes of the Organization</h1>
+                    </div>
+                </div>
+                <div class="w-full bg-gray-100 px-10 pt-10">
+                    <div class="container mx-auto">
+                        <div class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Andres Berlin</div>
+                                        <p class="text-gray-800 text-sm text-center">
+                                            Chief Executive Officer
+                                        </p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Silene Tokyo</div>
+                                        <p class="text-gray-800 text-sm text-center">
+                                            Product Design Head
+                                        </p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            The emphasis on innovation and technology in our companies has resulted in a few of them establishing global benchmarks in product design and development.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Johnson Stone</div>
+                                        <p class="text-gray-800 text-sm text-center">Manager Development</p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            Our services encompass the assessment and repair of property damage caused by water, fire, smoke, or mold. We can also be a part of the restoration.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Dean Jones</div>
+                                        <p class="text-gray-800 text-sm text-center">Principal Software Engineer</p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            An avid open-source developer who loves to be creative and inventive. I have 20 years of experience in the field.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Rachel Adams</div>
+                                        <p class="text-gray-800 text-sm text-center">Product Design Head</p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            Product designer with interests in immersive computing and XR, political ventures, and emerging technologies. Able to take ideas and give them a life.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div class="rounded overflow-hidden shadow-md bg-white">
+                                    <div class="absolute -mt-20 w-full flex justify-center">
+                                        <div class="h-32 w-32">
+                                            <img src="https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                        </div>
+                                    </div>
+                                    <div class="px-6 mt-16">
+                                        <div class="font-bold text-3xl text-center pb-1">Charles Keith</div>
+                                        <p class="text-gray-800 text-sm text-center">UX Designer</p>
+                                        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+                                            A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also questions it.
+                                        </p>
+                                        <div class="w-full flex justify-center pt-5 pb-5">
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" class="mx-5">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+                <div class="container mx-auto pt-16 mb-16">
+                    <div class="mb-10">
+                        <h1 class="xl:text-5xl pt-4 xl:pt-0 text-3xl text-gray-800 text-center font-extrabold mb-4">Our Blog Posts</h1>
+                        <p class="text-xl text-gray-600 text-center xl:w-3/5 mx-auto w-11/12">
+                            Don’t focus on having a great blog. Focus on producing a blog that’s great for your readers.” As a blogger, everything you do flows from understanding your audience and seeking to help them.
+                        </p>
+                    </div>
+                    <div class="lg:flex md:flex xl:justify-around sm:flex flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                        <div class="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
+                            <div data-scroll data-scroll-speed="2" class="shadow h-64 rounded z-10">
+                                <img src="https://cdn.tuk.dev/assets/photo-1573451444472-7b0b275ab824.jfif" alt="" class="h-full w-full object-cover overflow-hidden rounded" />
+                            </div>
+                            <div data-scroll data-scroll-speed="1" class="p-6 shadow-lg w-11/12 mx-auto -mt-20 bg-white rounded z-20 relative">
+                                <p class="uppercase text-sm text-indigo-700 text-center pb-3">VEHICLE</p>
+                                <p class="text-lg text-gray-800 text-center pb-3">The way I drive and handle a car, is an expression of my inner feeling.</p>
+                                <p class="text-sm text-gray-800 text-center">
+                                    May 13, 2019 by <a href="javascript:void(0)"><span class="text-indigo-700 cursor-pointer">Silene Cox</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
+                            <div data-scroll data-scroll-speed="2"  class="shadow h-64 rounded">
+                                <img src="https://cdn.tuk.dev/assets/photo-1544476915-ed1370594142.jfif" alt="" class="h-full w-full object-cover overflow-hidden rounded" />
+                            </div>
+                            <div data-scroll data-scroll-speed="1" class="p-6 shadow-lg w-11/12 mx-auto -mt-20 bg-white rounded z-20 relative">
+                                <p class="uppercase text-sm text-indigo-700 text-center pb-3">Work</p>
+                                <p class="text-lg text-gray-800 text-center pb-3">I'm a greater believer in luck, and I find the harder I work the more I have of it.</p>
+                                <p class="text-sm text-gray-800 text-center">
+                                    May 13, 2019 by <a href="javascript:void(0)"><span class="text-indigo-700 cursor-pointer">Sansa Rollins</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
+                            <div data-scroll data-scroll-speed="2" class="shadow h-64 rounded">
+                                <img src="https://cdn.tuk.dev/assets/photo-1462331940025-496dfbfc7564.jfif" alt="" class="h-full w-full object-cover overflow-hidden rounded" />
+                            </div>
+                            <div data-scroll data-scroll-speed="1" class="p-6 shadow-lg w-11/12 mx-auto -mt-20 bg-white rounded z-20 relative">
+                                <p class="uppercase text-sm text-indigo-700 text-center pb-3">Productivity</p>
+                                <p class="text-lg text-gray-800 text-center pb-3">Productivity is being able to do things that you were never able to do before.</p>
+                                <p class="text-sm text-gray-800 text-center">
+                                    May 13, 2019 by <a href="javascript:void(0)"><span class="text-indigo-700 cursor-pointer">Ashley Wilson</span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        
+            
+</div>
+        
+        <script src="./assets//locomotive.min.js"></script>
+        <script src="./assets/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+        <script>
+            (function () {
+                var scroll = new LocomotiveScroll();
+            })();
+            AOS.init({
+                duration: 800,
+            });
+        </script>
+    </body>
+</html>
+data-scroll data-scroll-speed="3"
